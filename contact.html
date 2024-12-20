@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoMoment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a id="navbar-logo"><i class="fas fa-gem"></i>PhotoMoment</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="home.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="products.html" class="navbar-links">Products</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="navbar-links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="main-3">
+        <div class="main-3-container">
+            <h1>Contact Us</h1>
+            <div class="form-section">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="email" placeholder="Email">
+                <textarea name="message" id="message" rows="4" cols="40" placeholder="Message"></textarea>
+                <button class="registerBtn" type="submit" onclick="showMessageSent()">Send Message</button>
+            </div>
+        </div>
+        <img src="pic1.svg" alt="">
+    </div>
+
+    <div class="footer" id="footer">
+        <h2>Capture life's amazing moments all around</h2>
+        <h3>America, NY, Street</h3>
+    </div>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar-menu');
+
+        menu.addEventListener('click', function(){
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+
+        document.getElementById("navbar-logo").addEventListener("click", function () {
+            window.scrollTo({
+            top: 0, 
+            behavior: "smooth" 
+            });
+        });
+
+        function showMessageSent() {
+            alert("Message sent successfully!");
+
+            document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoMoment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a id="navbar-logo"><i class="fas fa-gem"></i>PhotoMoment</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="home.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="products.html" class="navbar-links">Products</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="navbar-links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="main-2">
+        <div class="box1">
+            <div class="item1">
+                <img src="bzurag3.jpg" alt="Green sunny day in forested area">
+                <h2>Green sunny day in forested area</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+            <div class="item2">
+                <img src="bzurag4.jpg" alt="Misty cloudy rainy atmosphere">
+                <h2>Misty cloudy rainy atmosphere</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="item3">
+                <img src="bzurag5.jpg" alt="Balloons over the mountains atop">
+                <h2>Balloons over the mountains atop</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+            <div class="item4">
+                <img src="bzurag6.jpg" alt="Sun just coming out hitting view">
+                <h2>Sun just coming out hitting view</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="item5">
+                <img src="bzurag7.jpg" alt="Misty sunny mountain view">
+                <h2>Misty sunny mountain view</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+            <div class="item6">
+                <img src="bzurag8.jpg" alt="Snow covered mountains with trees">
+                <h2>Snow covered mountains with trees</h2>
+                <h3>Price: 10$</h3>
+                <button onclick="showPurchaseMessage()">Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Capture life's amazing moments all around</h2>
+        <h3>America, NY, Street</h3>
+    </div>
+
+    <script>
+
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar-menu');
+
+        menu.addEventListener('click', function(){
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+
+        document.getElementById("navbar-logo").addEventListener("click", function () {
+            window.scrollTo({
+            top: 0, 
+            behavior: "smooth" 
+            });
+        });
+
+        function showPurchaseMessage() {
+            alert("Purchased successfully!");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoMoment</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a id="navbar-logo">PhotoMoment</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="home.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="products.html" class="navbar-links">Products</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="navbar-links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="main-container1">
+            <h1>We offer nature photographs <br> captured beautifully in time</h1>
+            <img src="bzurag1.jpg" alt="nature pic">
+        </div>
+        <div class="main-container2">
+            <img src="bzurag2.jpg" alt="nature pic">
+            <h1>Not just mountain views, <br> right at that exact point</h1>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h2>Capture life's amazing moments all around</h2>
+        <h3>America, NY, Street</h3>
+    </div>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar-menu');
+
+        menu.addEventListener('click', function(){
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+
+        document.getElementById("navbar-logo").addEventListener("click", function () {
+            window.scrollTo({
+            top: 0, 
+            behavior: "smooth" 
+            });
+        });
+
+    </script>
+</body>
+</html>
